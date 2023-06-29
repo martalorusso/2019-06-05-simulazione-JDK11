@@ -21,13 +21,13 @@ public class EventsDao {
 
 			PreparedStatement st = conn.prepareStatement(sql) ;
 			
-			List<Event> list = new ArrayList<>() ;
+			List<Event> lista = new ArrayList<>() ;
 			
 			ResultSet res = st.executeQuery() ;
 			
 			while(res.next()) {
 				try {
-					list.add(new Event(res.getLong("incident_id"),
+					lista.add(new Event(res.getLong("incident_id"),
 							res.getInt("offense_code"),
 							res.getInt("offense_code_extension"), 
 							res.getString("offense_type_id"), 
@@ -48,7 +48,7 @@ public class EventsDao {
 			}
 			
 			conn.close();
-			return list ;
+			return lista ;
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

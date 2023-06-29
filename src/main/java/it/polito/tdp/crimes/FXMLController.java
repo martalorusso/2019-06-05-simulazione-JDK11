@@ -16,7 +16,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 public class FXMLController {
-	private Model model;
+	private Model mod;
 
     @FXML // ResourceBundle that was given to the FXMLLoader
     private ResourceBundle resources;
@@ -67,7 +67,7 @@ public class FXMLController {
 
     }
     
-    public void setModel(Model model) {
-    	this.model = model;
+    public void setModel(Model mod) {
+    	this.mod = mod;
     }
 }
